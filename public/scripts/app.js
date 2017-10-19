@@ -31,17 +31,14 @@ $('#submit').on('click', function(e) {
   let name = $('#name').val();
   let today = new Date();
   let date = today.setDate(today.getDate()-1);
-  let sleep = $('#hours').val();
-  let meals = [$('#breakfast').val(),$('#lunch').val(),$('#dinner').val(), $('#snacks').val()];
-  let meds = $('#medications').val();
   let moodText = $('#mood option:selected').text();
   let mood = convertMood(moodText);
   let exercise = $('#exercise').val();
 
-  $.post('/days', {name: name, date: today, meals: meals, sleep: sleep, meds: meds, mood: mood, exercise: exercise}).then(response => {
+  $.post('/days', {name: name, date: today, mood: mood, exercise: exercise}).then(response => {
     console.log(name);
     localStorage.userName = name;
-    window.location.href='/history.html'
+    window.location.href='public/results.html'
     })
   })
 }
