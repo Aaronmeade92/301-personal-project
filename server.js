@@ -78,14 +78,11 @@ function queryTwo(request, response) {
 function queryThree(user_id, request, response) {
   client.query(
     `INSERT INTO
-    daysdata(user_id, "name", "date", "meals", "sleep", "meds", "mood", "exercise")
+    daysdata(user_id, "name", "date", "mood", "exercise")
     VALUES($1, $2, $3, $4, $5, $6, $7, $8);`,
     [user_id,
     request.body.name,
     request.body.date,
-    request.body.meals,
-    request.body.sleep,
-    request.body.meds,
     request.body.mood,
     request.body.exercise
   ],

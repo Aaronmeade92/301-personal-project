@@ -35,7 +35,7 @@ $('#submit').on('click', function(e) {
   let mood = convertMood(moodText);
   let exercise = $('#exercise').val();
 
-  $.post('/days', {name: name, date: today, mood: mood, exercise: exercise}).then(response => {
+  $.post('/days', {name: name, date: today, mood: mood}).then(response => {
     console.log(name);
     localStorage.userName = name;
     window.location.href='public/results.html'
