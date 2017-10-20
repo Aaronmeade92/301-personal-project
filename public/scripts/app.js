@@ -26,7 +26,7 @@ function User(name){
 function submitForm () {
 $('#submit').on('click', function(e) {
   e.preventDefault();
-  console.log('is this working');
+  
   ///TODO: exercise and suppliments
   let name = $('#name').val();
   let today = new Date();
@@ -34,7 +34,7 @@ $('#submit').on('click', function(e) {
   let moodText = $('#mood option:selected').text();
   let mood = convertMood(moodText);
   let exercise = $('#exercise').val();
-
+console.log(mood);
   $.post('/days', {name: name, date: today, mood: mood}).then(response => {
     console.log(name);
     localStorage.userName = name;
