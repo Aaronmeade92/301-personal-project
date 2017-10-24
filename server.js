@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
-const conString = `${process.env.DATABASE_URL}`;
+const conString = 'postgres:postgres:Bengals92@' //`${process.env.DATABASE_URL}`//;
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -78,14 +78,11 @@ function queryTwo(request, response) {
 function queryThree(user_id, request, response) {
   client.query(
     `INSERT INTO
-    daysdata(user_id, "name", "date", "meals", "sleep", "meds", "mood", "exercise")
+    daysdata(user_id, "name", "date", "mood", "exercise")
     VALUES($1, $2, $3, $4, $5, $6, $7, $8);`,
     [user_id,
     request.body.name,
     request.body.date,
-    request.body.meals,
-    request.body.sleep,
-    request.body.meds,
     request.body.mood,
     request.body.exercise
   ],
