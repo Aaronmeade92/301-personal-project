@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Aaronmeade92/301-personal-project#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "fs": "0.0.1-security"
   }
 }
