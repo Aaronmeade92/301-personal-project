@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
-const conString = 'postgres:postgres:Bengals92@' //`${process.env.DATABASE_URL}`//;
+const conString = `${process.env.DATABASE_URL}`//;
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
