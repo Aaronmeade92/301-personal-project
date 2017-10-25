@@ -1,0 +1,23 @@
+{
+  "name": "pg",
+  "version": "7.3.0",
+  "description": "pg",
+  "main": "server.js",
+  "scripts": {
+    "test": "pg",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaronmeade92/301-personal-project.git"
+  },
+  "keywords": [
+    "pg"
+  ],
+  "author": "pg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaronmeade92/301-personal-project/issues"
+  },
+  "homepage": "https://github.com/Aaronmeade92/301-personal-project#readme"
+}
