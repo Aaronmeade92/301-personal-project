@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Aaronmeade92/301-personal-project/issues"
   },
-  "homepage": "https://github.com/Aaronmeade92/301-personal-project#readme"
+  "homepage": "https://github.com/Aaronmeade92/301-personal-project#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
