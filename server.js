@@ -29,13 +29,8 @@ client.query(`
   daysdata (
     data_id SERIAL PRIMARY KEY NOT NULL,
     user_id INTEGER NOT NULL REFERENCES users(user_id),
-    "name" VARCHAR(225) NOT NULL,
-    "date" VARCHAR(225) NOT NULL,
-    "meals" VARCHAR(225) ARRAY[1000] NOT NULL,
-    "sleep" INTEGER NOT NULL,
-    "meds" VARCHAR(225),
+    "name" VARCHAR(225) NOT NULL
     "mood" INTEGER NOT NULL,
-    "exercise" VARCHAR(225)
   )
 `).catch(console.error);
 }

@@ -33,12 +33,11 @@ $('#submit').on('click', function(e) {
   let date = today.setDate(today.getDate()-1);
   let moodText = $('#mood option:selected').text();
   let mood = convertMood(moodText);
-  let exercise = $('#exercise').val();
   console.log(mood);
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
     console.log(name);
     localStorage.userName = name;
-    window.location.href='/form.html'
+    window.location.href='form.html'
     })
   })
 }
