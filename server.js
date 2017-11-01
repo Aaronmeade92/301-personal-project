@@ -45,7 +45,7 @@ app.post('/days', function(request, response){
   })
 })
 
-app.get('/history/:name', function(request,response){
+app.get('/results/:name', function(request,response){
   client.query(`
     SELECT * FROM daysdata
     INNER JOIN users
