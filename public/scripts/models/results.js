@@ -3,7 +3,7 @@ var app = app || {};
 var userData = userData || [];
 
 (function(name){
-  $.get(`/history/${name}`)
+  $.get(`/results/${name}`)
   .then(results =>{
     userData = results;
     app.labelData = userData.map(function(day){
