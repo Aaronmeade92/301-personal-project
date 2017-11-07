@@ -26,18 +26,17 @@ function User(name){
 function submitForm () {
 $('#submit').on('click', function(e) {
   e.preventDefault();
-
-  ///TODO: exercise and suppliments
   let name = $('#name').val();
   let today = new Date();
   let date = today.setDate(today.getDate()-1);
   let moodText = $('#mood option:selected').text();
   let mood = convertMood(moodText);
   console.log(mood);
+
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
     console.log(name);
     localStorage.userName = name;
-    window.location.href='form.html'
+    window.location.href='/form.html'
     })
   })
 }
