@@ -23,8 +23,8 @@ function User(name){
   this.data = [];
 };
 
-function submitForm () {
-$('#submit').on('submit', function(e) {
+function submitForm (){
+$('#submit').on('click', function(e) {
   e.preventDefault();
   let name = $('#name').val();
   let today = new Date();
@@ -37,6 +37,7 @@ $('#submit').on('submit', function(e) {
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
     localStorage.userName = name;
     window.location.href='/form.html'
+    e.preventDefault();
     });
   });
 };
