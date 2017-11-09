@@ -24,7 +24,7 @@ function User(name){
 };
 
 function submitForm () {
-$('#submit').on('click', function(event) {
+$('#submit').on('submit', function(event) {
   event.preventDefault();
   let name = $('#name').val();
   let today = new Date();

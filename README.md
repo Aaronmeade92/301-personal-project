@@ -7,8 +7,9 @@
 ## Development Server
   Ran on a postgres server
 
-<!-- fill out read me
+<!-- fill out read me(done)
 fix form prevent default
-eslint
+eslint(???)
 fix username results
-fix indenting problems -->
+fix indenting problems(done)
+fix results page -->
