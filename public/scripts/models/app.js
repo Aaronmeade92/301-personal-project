@@ -24,7 +24,7 @@ function User(name){
 };
 
 function submitForm () {
-$('#submit').on('click', function(event) {
+$('#submit').on('submit', function(event) {
   event.preventDefault();
   let name = $('#name').val();
   let today = new Date();
@@ -33,6 +33,7 @@ $('#submit').on('click', function(event) {
   let mood = convertMood(moodText);
   console.log(mood);
   console.log(name);
+  
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
     localStorage.userName = name;
     window.location.href='/form.html'
