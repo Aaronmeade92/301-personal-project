@@ -1,8 +1,14 @@
-# 301-personal-project
-This is a personal project
+# Cowabunga!
+  Is a basic data tracker so that you can see how your week has been according to the mood you input.
 
-fill out read me
+## Installing
+  Run NPM install to install the necessary dependencies.
+
+## Development Server
+  Ran on a postgres server
+
+<!-- fill out read me
 fix form prevent default
 eslint
 fix username results
-fix indenting problems
+fix indenting problems -->
