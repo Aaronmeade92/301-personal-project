@@ -25,7 +25,7 @@ function User(name){
 
 function submitForm () {
 $('#submit').on('submit', function(e) {
-  e.preventDefault();
+  return false;
   let name = $('#name').val();
   let today = new Date();
   let date = today.setDate(today.getDate()-1);
@@ -66,12 +66,12 @@ function convertMood(mood){
   }
 }
 
-module.Day = Day;
-module.User = User;
-module.userData = userData;
-module.submitForm = submitForm;
-module.labelData = labelData;
-module.dayData = dayData;
+    module.Day = Day;
+    module.User = User;
+    module.userData = userData;
+    module.submitForm = submitForm;
+    module.labelData = labelData;
+    module.dayData = dayData;
 
 })(app);
 
