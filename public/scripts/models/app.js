@@ -21,11 +21,11 @@ function Day(rawDataObj) {
 function User(name){
   this.name = name;
   this.data = [];
-}
+};
 
 function submitForm () {
 $('#submit').on('submit', function(e) {
-  return false;
+  e.preventDefault();
   let name = $('#name').val();
   let today = new Date();
   let date = today.setDate(today.getDate()-1);
@@ -37,9 +37,9 @@ $('#submit').on('submit', function(e) {
     console.log(name);
     localStorage.userName = name;
     window.location.href='/form.html'
-    })
-  })
-}
+    });
+  });
+};
 
 function convertMood(mood){
   switch (mood) {
