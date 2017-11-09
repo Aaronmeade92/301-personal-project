@@ -32,9 +32,8 @@ $('#submit').on('submit', function(e) {
   let moodText = $('#mood option:selected').text();
   let mood = convertMood(moodText);
   console.log(mood);
-
+  console.log(name);
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
-    console.log(name);
     localStorage.userName = name;
     window.location.href='/form.html'
     });
