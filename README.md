@@ -1,2 +1,8 @@
 # 301-personal-project
 This is a personal project
+
+fill out read me
+fix form prevent default
+eslint
+fux username results
+fix indenting problems
