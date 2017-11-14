@@ -24,8 +24,8 @@ function User(name){
 };
 
 function submitForm (){
-$('#submit').on('click', function(event) {
-  event.preventDefault();
+$('#submit').on('click', function(e) {
+  e.preventDefault();
   let name = $('#name').val();
   let today = new Date();
   let date = today.setDate(today.getDate()-1);
@@ -36,7 +36,7 @@ $('#submit').on('click', function(event) {
 
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
     localStorage.userName = name;
-    window.location.href='form.html'
+    window.location.href='/form.html'
     event.preventDefault();
     });
   });
