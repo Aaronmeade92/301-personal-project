@@ -9,7 +9,6 @@
 
 <!-- fill out read me(done)
 fix form prevent default
-eslint(???)
-fix username results
+fix username results(done)
 fix indenting problems(done)
 fix results page -->
