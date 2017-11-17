@@ -37,7 +37,7 @@ $('#submit').on('submit', function(e) {
   $.post('/days', {name: name, date: today, mood: mood,}).then(response => {
     localStorage.userName = name;
     window.location.href='/results.html'
-    event.preventDefault();
+    e.preventDefault();
     });
   });
 };

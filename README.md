@@ -8,7 +8,7 @@
   Ran on a postgres server
 
 <!-- fill out read me(done)
-fix form prevent default
+fix form prevent default(done)
 fix username results(done)
 fix indenting problems(done)
-fix results page -->
+fix results page!!!! -->
